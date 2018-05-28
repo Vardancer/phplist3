@@ -192,7 +192,7 @@ if (defined('MAX_PROCESSQUEUE_TIME') && MAX_PROCESSQUEUE_TIME > 0) {
 }
 // in-page processing force to a minute max, and make sure there's a batch size
 if (empty($GLOBALS['commandline'])) {
-    $maxProcessQueueTime = min($maxProcessQueueTime, 900);
+    $maxProcessQueueTime = min($maxProcessQueueTime, 60);
     if ($counters['num_per_batch'] <= 0) {
         $counters['num_per_batch'] = 10000;
     }
