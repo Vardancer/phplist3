@@ -18,6 +18,24 @@ function accessLevel($page)
     if (!is_array($_SESSION['logindetails'])) {
         return 0;
     }
+    
+    // Modification Start
+    if ($page == 'send') {
+        return 'all';
+    }
+    if ($page == 'list') {
+        return 'all';
+    }
+    if ($page == 'members') {
+        return 'all';
+    }
+    if ($page == 'user') {
+        return 'all';
+    }
+    if ($page == 'users') {
+        return 'all';
+    }
+    // Modification End
 
     //# for non-supers we only allow owner views
     //# this is likely to need tweaking
